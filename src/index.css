@@ -1,0 +1,202 @@
+@font-face {
+  font-family: central_bold;
+  src: url("./assets/font/Central-Bold.ttf");
+  font-display: block;
+}
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  user-select: none;
+  user-zoom: none;
+  font-family: central_bold;
+}
+body {
+  background-color: #212122 !important;
+  overflow: hidden;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dark {
+  background: linear-gradient(#2a2c36, #16171d);
+}
+#dark::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: aliceblue;
+  border-radius: 50%;
+  box-shadow: 0rem 0rem 0.6rem #d6d6d6, 20rem 20rem 0 0.3rem #d6d6d6,
+    20rem 20rem 0.6rem 0.3rem #d6d6d6, 10rem 14rem 0 0.3rem #d6d6d6,
+    10rem 14rem 0.6rem 0.3rem #d6d6d6;
+  animation: star1 1s ease-in infinite alternate;
+}
+#dark::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 25%;
+  width: 1rem;
+  height: 1rem;
+  background-color: aliceblue;
+  border-radius: 50%;
+  box-shadow: 0rem 0rem 0.6rem #d6d6d6, 10rem 5rem 0 0.5rem #d6d6d6,
+    10rem 5rem 0.6rem 0.5rem #d6d6d6;
+  animation: star2 1s ease-in infinite alternate;
+}
+@keyframes star1 {
+  from {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  to {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+@keyframes star2 {
+  from {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  to {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+#dark ::placeholder {
+  color: aliceblue;
+}
+#dark #moon {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: #d6d6d6;
+  box-shadow: 0 0 0.5rem #d6d6d6, 0 0 3rem #d6d6d6, 1rem -0.3rem 0 #888d95,
+    1rem -0.3rem 0.4rem #888d95;
+  animation: moon 0.6s ease-in-out forwards;
+}
+#dark #moon > span:nth-child(1) {
+  content: "";
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: #b9b8b0;
+  border-radius: 50%;
+  box-shadow: inset -0.3rem 0.3rem 0 #7e7e7f;
+}
+#dark #moon > span:nth-child(2) {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 15rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #b9b8b0;
+  border-radius: 50%;
+  box-shadow: inset -0.3rem 0.3rem 0 #7e7e7f;
+}
+#dark #moon > span:nth-child(3) {
+  content: "";
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #b9b8b0;
+  border-radius: 50%;
+  box-shadow: inset -0.3rem 0.3rem 0 #7e7e7f;
+}
+@keyframes moon {
+  from {
+    transform: translateY(-50%) translateX(-50%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+#light {
+  background: linear-gradient(#8dd0e6, #369efa);
+}
+#light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: #f2ef88;
+  box-shadow: 0 0 0.2rem yellow, 0 0 10rem yellow;
+  animation: sun 0.7s ease-in-out forwards;
+}
+@keyframes sun {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #dark #moon {
+    width: 15rem;
+    height: 15rem;
+  }
+  #dark #moon > span:nth-child(1) {
+    top: 6rem;
+    left: 3rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  #dark #moon > span:nth-child(2) {
+    top: 3rem;
+    left: 10rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  #dark #moon > span:nth-child(3) {
+    top: 10rem;
+    left: 10rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #dark::after {
+    top: 5%;
+    right: 10%;
+    box-shadow: 0 0 0.5rem #d6d6d6, 0 0 3rem #d6d6d6, 2rem 3rem 0 #888d95,
+      2rem 3rem 0.4rem #888d95;
+  }
+  #dark::before {
+    top: 20%;
+    right: 25%;
+    box-shadow: 0rem 0rem 0.6rem #d6d6d6, 2rem 2rem 0 0.3rem #d6d6d6,
+      2rem 2rem 0.6rem 0.3rem #d6d6d6, 1rem -4rem 0 0.3rem #d6d6d6,
+      1rem -4rem 0.6rem 0.3rem #d6d6d6;
+  }
+
+  #light::after {
+    top: 0;
+    width: 25rem;
+    height: 25rem;
+  }
+}

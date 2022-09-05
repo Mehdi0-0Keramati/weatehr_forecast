@@ -1,0 +1,163 @@
+.wi {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.item-day:first-child {
+  display: none;
+}
+img {
+  width: 3rem;
+  height: 3rem;
+}
+.searchBar .input_search {
+  border: 1px solid aliceblue;
+  color: aliceblue;
+}
+
+.searchBar button {
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0cd5f0e3;
+}
+
+.searchBar button.loading {
+  background: repeating-linear-gradient(
+    135deg,
+    #0cd5f0 0%,
+    #0cd5f0 10%,
+    #0cd5f0e3 11%,
+    #0cd5f0e3 20%
+  );
+  animation: anime 0.4s linear infinite;
+}
+@keyframes anime {
+  from {
+    background: repeating-linear-gradient(
+      135deg,
+      #0cd5f0 0%,
+      #0cd5f0 10%,
+      #0cd5f0e3 11%,
+      #0cd5f0e3 20%
+    );
+  }
+  to {
+    background: repeating-linear-gradient(
+      135deg,
+      #0cd5f0e3 0%,
+      #0cd5f0e3 10%,
+      #0cd5f0 11%,
+      #0cd5f0 20%
+    );
+  }
+}
+.gifWeather {
+  width: 70%;
+  height: 60%;
+  margin-top: 2rem;
+  background-position: center center;
+}
+.weather-container {
+  z-index: 20;
+  background: #25253083;
+  color: aliceblue;
+  width: 90vw;
+  height: 80vh;
+  padding-bottom: 1rem;
+}
+.forecast_box {
+  background-color: #0a0a0f6c;
+  width: 96%;
+  margin: 0 auto;
+}
+.leftSide {
+  width: 30%;
+  height: 18rem;
+}
+@media screen and (min-width: 800px) {
+  .weather-container {
+    width: 50rem;
+    height: 33rem;
+  }
+  .forecast_box {
+    width: 70%;
+    position: absolute;
+    right: 2%;
+    bottom: 10%;
+  }
+  .leftSide {
+    height: 23rem;
+  }
+  .gifWeather {
+    width: 50%;
+  }
+}
+
+/*? toggle theme */
+.toggleThemeBox {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+}
+.toggleThemeBox > input {
+  display: none;
+}
+.toggleThemeBox > label {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("./assets/picture/sun.svg");
+}
+.toggleThemeBox > input:checked + label {
+  background-image: url("./assets/picture/moon.svg");
+}
+/*? toggle theme */
+
+/*! light Theme */
+#light .weather-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #212020;
+}
+#light .forecast_box {
+  background-color: rgba(11, 130, 199, 0.349);
+}
+#light .searchBar button {
+  background-color: gold;
+}
+
+#light .searchBar .input_search {
+  color: #212020;
+  border: 1px solid #5b5bb9;
+}
+#light .searchBar button.loading {
+  background: repeating-linear-gradient(
+    135deg,
+    #e7ff8f 0%,
+    #e7ff8f 10%,
+    yellow 11%,
+    yellow 20%
+  );
+  animation: lightAnime 0.4s linear infinite;
+}
+@keyframes lightAnime {
+  from {
+    background: repeating-linear-gradient(
+      135deg,
+      gold 0%,
+      gold 10%,
+      #e7ff8f 11%,
+      #e7ff8f 20%
+    );
+  }
+  to {
+    background: repeating-linear-gradient(
+      135deg,
+      #e7ff8f 0%,
+      #e7ff8f 10%,
+      gold 11%,
+      gold 20%
+    );
+  }
+}
+/*! light Theme */
