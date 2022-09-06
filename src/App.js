@@ -5,7 +5,7 @@ import ApiContext from "./context.jsx";
 function App() {
   const [theme, setTheme] = useState('dark')
   const ThemeChange = () => {
-    setTheme((curr) => curr == "dark" ? "light" : "dark")
+    setTheme((curr) => curr === "dark" ? "light" : "dark")
   }
   return (
     <ApiContext.Provider
